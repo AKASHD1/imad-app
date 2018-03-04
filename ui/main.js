@@ -15,6 +15,7 @@ console.log('Loaded!');
         if(marginRight==20)
         {
             marginLeft=0;
+            marginRight=0;
         }
      }
      else
