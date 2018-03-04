@@ -12,8 +12,13 @@ console.log('Loaded!');
      {
          marginRight=marginRight+1;
         element2.style.marginRight=marginRight+'px'; 
+        if(marginRight==20)
+        {
+            marginLeft=0;
+        }
      }
-     else{
+     else((marginLeft<20)||())
+     {
      marginLeft=marginLeft+1;
      element2.style.marginLeft=marginLeft+'px';
      }
