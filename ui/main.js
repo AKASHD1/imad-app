@@ -51,6 +51,6 @@ console.log('Loaded!');
      }
      
      //make the request
-     request.open('GET','http://u222dutta.imad.hasura-app.io',true);
+     request.open('GET','http://u222dutta.imad.hasura-app.io/counter',true);
      request.send(null);
  }
