@@ -4,5 +4,5 @@ console.log('Loaded!');
  element.innerHTML="bbye meet you u again";
  var element2=document.getElementById('madi')
  element2.onclick=function() {
-     element2.style.marginleft="100px";
+     element2.style.marginleft='100px';
  }
