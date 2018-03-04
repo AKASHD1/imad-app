@@ -5,6 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var counter=0;
+
 app.get('/counter', function (req, res) {
  counter+=1;
  res.send(counter.toString());
@@ -32,6 +33,9 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/profile.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+  counter+=1;
+  var span=document.getElementById('visitcount');
+  span.innerHTML=counter.toString();
 });
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
