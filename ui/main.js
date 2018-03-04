@@ -2,8 +2,14 @@ console.log('Loaded!');
 //changing the content of the html element main-text
  var element=document.getElementById('main-text');
  element.innerHTML="bbye meet you u again";
- //moving the image
+ //moving the image with animation
  var element2=document.getElementById('madi');
+ var marginLeft=0;
+ function moveRight()
+ {
+     marginLeft=marginLeft+1;
+     element2.style.marginLeft=marginLeft+'px';
+ }
  element2.onclick=function() {
-     element2.style.marginLeft='100px';
+     var interval= setInterval(moveRight,50);
  }
