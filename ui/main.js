@@ -28,17 +28,29 @@ console.log('Loaded!');
      var interval= setInterval(moveRight,50);
  }
  
+ //new module
+ 
  //for counter code
  var button=document.getElementById('counter');
  var counter=0;
  button.click=function(){
-     //make a request to the counter endpoint
-     
+     //create a request object
+     var request= new XMLHttpRequest();
      //capture the response and store it in a variable
+     request.onreadystatechange=function() {
+         if(request.readyState===XMLHttpRequest.Done) {
+             //take some action
+             if(request.status===200) {
+                 var counter=request.responseText;
+                 //render the variable in the correct span
+           var span=document.getElementById('count');
+           span.innerHTML=counter.toString();
+             }
+         }
+         //do nothing
+     }
      
-     //render the variable in the correct span
-     counter=counter+1;
-     var span=document.getElementById('count');
-     span.innerHTML=counter.toString();
-     
+     //make the request
+     request.open('GET','http://u222dutta.imad.hasura-app.io',true);
+     request.send(null);
  }
