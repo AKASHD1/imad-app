@@ -17,7 +17,7 @@ console.log('Loaded!');
             marginLeft=0;
         }
      }
-     else((marginLeft<20)||())
+     else
      {
      marginLeft=marginLeft+1;
      element2.style.marginLeft=marginLeft+'px';
