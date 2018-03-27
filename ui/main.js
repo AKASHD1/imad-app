@@ -1,3 +1,4 @@
+//to write something on browser console.
 console.log('Loaded!');
 //changing the content of the html element main-text
  var element=document.getElementById('main-text');
@@ -26,7 +27,7 @@ console.log('Loaded!');
  }
  element2.onclick=function() {
      var interval= setInterval(moveRight,50);
- }
+ };
  
  //new module
  
