@@ -21,7 +21,7 @@ app.get('/counter', function (req, res) {
  res.send(counter.toString());
 });
 
-app.get('/test-db',function(reg,res) {
+app.get('/test-db',function(req,res) {
   //making a select request
   //then returning a response with the results
   pool.query('SELECT * FROM article',function(err,result){
