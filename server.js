@@ -21,8 +21,7 @@ app.get('/counter', function (req, res) {
  res.send(counter.toString());
 });
 
-app.get('/test-db',function(reg,res)
-{
+app.get('/test-db',function(reg,res) {
   //making a select request
   //then returning a response with the results
   pool.query('SELECT * FROM article',function(err,result){
@@ -31,7 +30,7 @@ app.get('/test-db',function(reg,res)
       } else{
           res.send(JSON.stringify(result));
       }
-  })
+  });
 });
 
 app.get('/', function (req, res){
